@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Remove the i18n block
+  experimental: {
+    serverActions: true, // or other features you use
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
