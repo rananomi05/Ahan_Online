@@ -5,7 +5,6 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
-import { GiWrench } from "react-icons/gi";
 
 
 import { FaBars, FaChevronLeft } from "react-icons/fa";
@@ -21,7 +20,7 @@ import {
     GiSteelClaws,
     GiMetalBar,
     GiSteeltoeBoots,
-    GiPipeWrench,
+    GiWrench,
     GiRolledCloth,
     GiMeshNetwork,
     GiNuclearWaste,
