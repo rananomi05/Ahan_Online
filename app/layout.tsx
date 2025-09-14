@@ -1,9 +1,8 @@
-// app/[locale]/layout.tsx
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../app/Component/Navbar";
-
+import Navbar from "./Component/Navbar"; // adjust path to your Navbar
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,35 +14,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Optional: define your supported locales
-
-
 export const metadata: Metadata = {
   title: "Ahan Online",
   description: "Multilingual support app",
 };
 
-export default function LocaleLayout({
+export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
-  const { locale } = params;
-
-  // Check if the locale is valid
-
   return (
-    <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         {children}
-
       </body>
-    </ html>
-
+    </html>
   );
 }
